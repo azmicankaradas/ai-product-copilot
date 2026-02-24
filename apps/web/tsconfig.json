@@ -1,0 +1,34 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "jsx": "preserve",
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "paths": {
+            "@/*": [
+                "./*"
+            ],
+            "@ai-product-copilot/database": [
+                "../../packages/database/src"
+            ],
+            "@ai-product-copilot/ui": [
+                "../../packages/ui/src"
+            ],
+            "@ai-product-copilot/engine": [
+                "../../packages/engine/src"
+            ]
+        }
+    },
+    "include": [
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        ".next/types/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
