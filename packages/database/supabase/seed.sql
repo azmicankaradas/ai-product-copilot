@@ -173,4 +173,5 @@ VALUES (
         "non_metallic": true
     }'::jsonb,
     true
-);
+)
+ON CONFLICT (tenant_id, sku) DO NOTHING;
